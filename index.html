@@ -95,7 +95,6 @@ nav{background:rgba(10,14,28,.95);backdrop-filter:blur(10px);border-bottom:1px s
 .brand-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);}
 .brand-list{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
 .brand-item{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
-.brand-item{font-weight:800;color:#fff;font-size:15px;}
 
 /* ─── STATS BAR ─── */
 .stats-bar{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
@@ -119,28 +118,28 @@ nav{background:rgba(10,14,28,.95);backdrop-filter:blur(10px);border-bottom:1px s
 .s-title .gold{color:var(--gold);}
 
 /* ─── OFFER CARDS ─── */
-.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);max-width:1100px;margin:0 auto;gap:20px;}
-.offer-card{background:#ffffff;border:1px solid #e5e7eb;border-radius:18px;padding:24px 20px 20px;text-align:left;text-decoration:none;color:#111;display:flex;flex-direction:column;align-items:flex-start;gap:12px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;}
-.offer-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.15);}
+.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.offer-card{background:#ffffff;border:1px solid #e5e7eb;border-radius:18px;padding:24px 16px 20px;text-align:center;text-decoration:none;color:#111;display:flex;flex-direction:column;align-items:center;gap:10px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;}
+.offer-card:hover{transform:translateY(-6px);border-color:rgba(245,197,24,.5);box-shadow:0 16px 40px rgba(0,0,0,.1);}
 .offer-card.featured{border-color:rgba(245,197,24,.4);box-shadow:0 0 0 1px rgba(245,197,24,.2);}
-.offer-top-badge{position:absolute;top:0;left:0;padding:5px 10px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;border-bottom-right-radius:10px;}
+.offer-top-badge{position:absolute;top:0;left:0;right:0;padding:5px 0;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;text-align:center;}
 .badge-red{background:#ef4444;color:#fff;}
 .badge-purple{background:#7c3aed;color:#fff;}
 .badge-gold{background:linear-gradient(90deg,var(--gold2),var(--gold));color:#000;}
-.offer-logo{width:100%;height:160px;object-fit:contain;border-radius:12px;background:#f3f4f6;padding:16px;}
+.offer-logo{width:80px;height:80px;object-fit:contain;margin-top:14px;}
 .offer-brand{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#666;}
-.offer-amount{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:#22c55e;line-height:1;}
+.offer-amount{font-family:'Barlow Condensed',sans-serif;font-size:46px;font-weight:900;color:#22c55e;line-height:1;}
 .offer-desc{font-size:12px;color:#666;line-height:1.5;}
 .offer-meta{display:flex;flex-direction:column;gap:4px;width:100%;border-top:1px solid #e5e7eb;padding-top:10px;}
-.offer-meta-row{display:flex;align-items:center;gap:6px;font-size:11px;color:#999;justify-content:flex-start;}
-.offer-btn{width:100%;padding:13px 0;text-align:center;border-radius:10px;font-size:13px;font-weight:800;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#000;text-transform:uppercase;letter-spacing:.5px;transition:transform .15s,box-shadow .15s;}
+.offer-meta-row{display:flex;align-items:center;gap:6px;font-size:11px;color:#999;justify-content:center;}
+.offer-btn{width:100%;padding:12px 0;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#000;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;border-radius:10px;margin-top:4px;transition:transform .15s,box-shadow .15s;}
 .offer-card:hover .offer-btn{transform:scale(1.03);box-shadow:0 4px 16px rgba(230,168,0,.4);}
 
 /* ─── HOW IT WORKS ─── */
-.hiw-grid{display:grid;grid-template-columns:1fr;max-width:600px;margin:0 auto;gap:16px;position:relative;}
-.hiw-grid::before{display:none;}
-.hiw-card{background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:16px;text-align:left;flex-direction:row;display:flex;gap:16px;position:relative;z-index:1;align-items:center;}
-.hiw-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#000;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;}
+.hiw-grid::before{content:'';position:absolute;top:50px;left:calc(16.6% + 20px);right:calc(16.6% + 20px);height:2px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);z-index:0;}
+.hiw-card{background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:28px 20px;text-align:center;position:relative;z-index:1;}
+.hiw-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#000;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
 .hiw-icon{font-size:28px;margin-bottom:12px;}
 .hiw-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--gold);margin-bottom:8px;}
 .hiw-text{font-size:13px;color:var(--muted);line-height:1.6;}
@@ -163,7 +162,7 @@ nav{background:rgba(10,14,28,.95);backdrop-filter:blur(10px);border-bottom:1px s
 .faq-item.open .faq-icon{transform:rotate(45deg);}
 
 /* REVIEWS */
-.review-card{background:#1a2236;border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:14px;}
+.review-card{background:var(--dark2);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;}
 .review-stars{color:var(--gold);font-size:13px;margin-bottom:6px;}
 .review-text{font-size:13px;color:rgba(255,255,255,.75);line-height:1.5;margin-bottom:8px;}
 .review-author{display:flex;align-items:center;gap:8px;}
@@ -256,9 +255,6 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
 </style>
 </head>
 <body>
-<div class="alert-bar">
-  🔥 <span>Limited Time:</span> New offers added daily — Enter now before they expire!
-</div>
 
 <!-- NAVBAR -->
 <nav>
@@ -270,124 +266,161 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
     <div class="nav-links">
       <a href="#" class="active">Home</a>
       <a href="#offers">Offers</a>
+      <a href="#winners">Winners</a>
       <a href="#how">How It Works</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
     </div>
     <a href="#offers" class="nav-cta">View All Offers</a>
     <button class="hamburger" onclick="this.textContent=this.textContent==='☰'?'✕':'☰'">☰</button>
   </div>
 </nav>
 
+<!-- ALERT BAR -->
+<div class="alert-bar">🔥 LIMITED TIME ONLY — <span id="spots">46</span> SPOTS LEFT TODAY!</div>
+
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-    <h1 class="hero-h1" style="text-transform:none;font-size:clamp(32px,4vw,52px);">Discover Free<br><span class="gold">Reward Opportunities</span></h1>
+    <div class="hero-badge">🎉 Reward Opportunities</div>
+    <h1 class="hero-h1">Discover Free +<br><span class="gold">Reward Opportunities</span></h1>
     <p class="hero-p">Enter promotional giveaways from trusted partners for a chance to receive amazing rewards.</p>
-    <div class="hero-trust" style="grid-template-columns:1fr 1fr;gap:12px;max-width:480px;">
-      <div class="trust-item" style="background:var(--dark2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;">
-        <div class="trust-icon" style="background:rgba(34,197,94,.15);border:2px solid #22c55e;border-radius:50%;color:#22c55e;font-size:14px;">✓</div>
-        <div><div class="trust-label">Free to Enter</div><div class="trust-sub">No Purchase Necessary</div></div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <div class="trust-icon">🆓</div>
+        <div><div class="trust-label">Free to Enter</div><div class="trust-sub">No purchase needed</div></div>
       </div>
-      <div class="trust-item" style="background:var(--dark2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;">
-        <div class="trust-icon" style="background:rgba(34,197,94,.15);border:2px solid #22c55e;border-radius:50%;color:#22c55e;font-size:14px;">✓</div>
-        <div><div class="trust-label">Trusted Partners</div><div class="trust-sub">Secure &amp; Reliable Offers</div></div>
+      <div class="trust-item">
+        <div class="trust-icon">🤝</div>
+        <div><div class="trust-label">Trusted Partners</div><div class="trust-sub">Secure &amp; reliable offers</div></div>
       </div>
-      <div class="trust-item" style="background:var(--dark2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;">
-        <div class="trust-icon" style="background:rgba(34,197,94,.15);border:2px solid #22c55e;border-radius:50%;color:#22c55e;font-size:14px;">✓</div>
-        <div><div class="trust-label">New Offers Daily</div><div class="trust-sub">Fresh Opportunities</div></div>
+      <div class="trust-item">
+        <div class="trust-icon">🔄</div>
+        <div><div class="trust-label">New Offers Daily</div><div class="trust-sub">Fresh rewards every day</div></div>
       </div>
-      <div class="trust-item" style="grid-column:span 2;justify-content:center;">
-        <div class="trust-icon" style="background:rgba(34,197,94,.15);border:2px solid #22c55e;border-radius:50%;color:#22c55e;font-size:14px;">✓</div>
-        <div><div class="trust-label">Available to US Residents</div><div class="trust-sub">Eligibility Varies by Offer</div></div>
+      <div class="trust-item">
+        <div class="trust-icon">🇺🇸</div>
+        <div><div class="trust-label">US Residents</div><div class="trust-sub">Available to US residents</div></div>
       </div>
     </div>
   </div>
-  <div class="hero-right" style="position:relative;">
-    <img src="hero-gift-box.png" alt="Gift Box with Rewards" style="width:100%;max-width:520px;">
-    <!-- Badge circulaire 100% FREE -->
-    <div style="position:absolute;bottom:30px;right:10px;width:85px;height:85px;background:linear-gradient(135deg,#d4a017,#f5c518);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:3px solid rgba(255,255,255,.2);box-shadow:0 8px 32px rgba(245,197,24,.3);">
-      <span style="font-size:11px;font-weight:800;color:#000;line-height:1;">100%</span>
-      <span style="font-size:14px;font-weight:900;color:#000;line-height:1;">FREE</span>
-      <span style="font-size:9px;font-weight:700;color:#000;">TO ENTER</span>
-    </div>
+  <div class="hero-right">
+    <img src="hero-image.png" alt="Gift Cards and Rewards" style="width:100%;max-width:500px;object-fit:contain;">
   </div>
 </div>
 
 <!-- BRAND BAR -->
-<div class="brand-bar" style="background:#0d1117;padding:8px 24px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="brand-bar-inner" style="background:#1a2236;border-radius:50px;border:1px solid rgba(255,255,255,.1);padding:14px 28px;">
+<div class="brand-bar">
+  <div class="brand-bar-inner">
     <span class="brand-label">⭐ Featured Brands</span>
     <div class="brand-list">
-      <img src="amazon-logo.png" style="height:24px;filter:brightness(0) invert(1);">
-      <span style="font-weight:800;color:#fff;font-size:16px;">Walmart <span style="color:#ffc220;">✻</span></span>
-      <span style="font-weight:800;color:#fff;font-size:16px;">🎯 TARGET</span>
-      <img src="aldi-logo.png" style="height:22px;">
-      <span style="font-weight:800;color:#fff;font-size:16px;">PayPal</span>
+      <span class="brand-item">amazon</span>
+      <span class="brand-item">Walmart</span>
+      <span class="brand-item">TARGET</span>
+      <span class="brand-item">ALDI</span>
+      <span class="brand-item">PayPal</span>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-people">
+      <span>👥</span>
+      <span><strong>2,847</strong> people entering today &nbsp;·&nbsp; <strong style="color:#22c55e;">139 winners</strong> this week</span>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="progress-wrap">
+      <div class="progress-label">Today's Participation Limit <span id="pct">82%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="pfill" style="width:82%"></div></div>
+    </div>
+    <div class="stat-count">
+      <strong id="spotsbig">46</strong>
+      <span>/ 250 Spots Left Today</span>
     </div>
   </div>
 </div>
 
 <!-- OFFERS -->
 <div class="section" id="offers">
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
-    <h2 style="font-size:22px;font-weight:800;">Featured Offers</h2>
-    <span style="background:var(--dark3);color:var(--muted);font-size:12px;padding:4px 12px;border-radius:100px;border:1px solid var(--border);">Handpicked Opportunities Just for You</span>
-  </div>
+  <div class="s-label">🔥 Featured Offers</div>
+  <div class="s-title">Handpicked Opportunities <span class="gold">Just for You</span></div>
   <div class="offers-grid">
 
+    <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=91&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
+      <div class="offer-top-badge badge-red">🔥 Hot Choice</div>
+      <img class="offer-logo" src="taco bell.png" style="width:80px;height:80px;object-fit:contain;background:white;border-radius:12px;padding:8px;" alt="Taco Bell">
+      <div class="offer-brand">Taco Bell</div>
+      <div class="offer-amount">$100</div>
+      <div class="offer-desc">Gift Card Giveaway</div>
+      <div class="offer-meta">
+        <div class="offer-meta-row">⏰ Limited Availability</div>
+        <div class="offer-meta-row">👥 Thousands Participating</div>
+      </div>
+      <div class="offer-btn">Enter Now →</div>
+    </a>
+
+    <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=576&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
+      <img class="offer-logo" src="paypal.png" alt="PayPal">
+      <div class="offer-brand">PayPal</div>
+      <div class="offer-amount">$100</div>
+      <div class="offer-desc">Cash Reward Offer</div>
+      <div class="offer-meta">
+        <div class="offer-meta-row">⏰ Limited Availability</div>
+        <div class="offer-meta-row">👥 Thousands Participating</div>
+      </div>
+      <div class="offer-btn">Enter Now →</div>
+    </a>
+
     <a class="offer-card featured" href="https://app.hawktrk.com/click?pid=2&offer_id=19630&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
-      <div class="offer-top-badge" style="background:#22c55e;color:#fff;">⭐ Featured Offer</div>
+      <div class="offer-top-badge badge-purple">⭐ Featured Offer</div>
       <img class="offer-logo" src="card_amazon.png" alt="Amazon">
       <div class="offer-brand">Amazon</div>
       <div class="offer-amount">$1,000</div>
-      <div style="font-size:16px;font-weight:800;color:#111;margin-top:4px;">Amazon Gift Card</div>
-      <div class="offer-desc">Enter for a chance to win a $1,000 Amazon Gift Card.</div>
+      <div class="offer-desc">Amazon Gift Card</div>
       <div class="offer-meta">
         <div class="offer-meta-row">⏰ Limited Availability</div>
         <div class="offer-meta-row">👥 Thousands Participating</div>
       </div>
-      <div style="display:flex;align-items:center;gap:6px;color:#22c55e;font-size:12px;font-weight:600;margin-top:4px;">
-        <span style="width:16px;height:16px;background:#22c55e;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;">✓</span>
-        No purchase necessary
+      <div class="offer-btn">View Offer →</div>
+    </a>
+
+    <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=7&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
+      <img class="offer-logo" src="Chick-fil-A-logo.png" alt="Chick-fil-A">
+      <div class="offer-brand">Chick-fil-A</div>
+      <div class="offer-amount">$100</div>
+      <div class="offer-desc">Gift Card Giveaway</div>
+      <div class="offer-meta">
+        <div class="offer-meta-row">⏰ Limited Availability</div>
+        <div class="offer-meta-row">👥 Thousands Participating</div>
       </div>
-      <div class="offer-btn">ENTER NOW →</div>
+      <div class="offer-btn">Get Started →</div>
     </a>
 
     <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=17412&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
-      <div class="offer-top-badge" style="background:#f97316;color:#fff;">🔥 Most Popular</div>
+      <div class="offer-top-badge badge-red">🔥 Most Popular</div>
       <img class="offer-logo" src="card_aldi.png" alt="Aldi Rewards">
       <div class="offer-brand">Aldi Rewards</div>
-      <div class="offer-amount" style="color:#f59e0b;">$1,000</div>
-      <div style="font-size:16px;font-weight:800;color:#111;margin-top:4px;">Aldi Rewards Card</div>
-      <div class="offer-desc">Enter for a chance to win a $1,000 Aldi Rewards Card.</div>
+      <div class="offer-amount">$1,000</div>
+      <div class="offer-desc">Aldi Rewards Card</div>
       <div class="offer-meta">
         <div class="offer-meta-row">⏰ Limited Availability</div>
         <div class="offer-meta-row">👥 Thousands Participating</div>
       </div>
-      <div style="display:flex;align-items:center;gap:6px;color:#22c55e;font-size:12px;font-weight:600;margin-top:4px;">
-        <span style="width:16px;height:16px;background:#22c55e;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;">✓</span>
-        No purchase necessary
-      </div>
-      <div class="offer-btn">ENTER NOW →</div>
+      <div class="offer-btn">View Offer →</div>
     </a>
 
     <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=20830&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
-      <div class="offer-top-badge" style="background:#3b82f6;color:#fff;">🏆 Top Reward</div>
+      <div class="offer-top-badge badge-gold">🏆 Top Reward</div>
       <img class="offer-logo" src="card_shopping.png" alt="Grocery Card">
       <div class="offer-brand">Grocery Card</div>
-      <div class="offer-amount" style="color:#3b82f6;">$1,000</div>
-      <div style="font-size:16px;font-weight:800;color:#111;margin-top:4px;">Grocery Rewards Card</div>
-      <div class="offer-desc">Enter for a chance to win a $1,000 Grocery Rewards Card.</div>
+      <div class="offer-amount">$1,000</div>
+      <div class="offer-desc">Grocery Rewards Card</div>
       <div class="offer-meta">
         <div class="offer-meta-row">⏰ Limited Availability</div>
         <div class="offer-meta-row">👥 Thousands Participating</div>
       </div>
-      <div style="display:flex;align-items:center;gap:6px;color:#22c55e;font-size:12px;font-weight:600;margin-top:4px;">
-        <span style="width:16px;height:16px;background:#22c55e;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;">✓</span>
-        No purchase necessary
-      </div>
-      <div class="offer-btn">ENTER NOW →</div>
+      <div class="offer-btn">View Offer →</div>
     </a>
 
   </div>
@@ -395,23 +428,11 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1100px;margin:0 auto;padding:20px 24px;">
-    <div style="display:flex;align-items:center;gap:12px;">
-      <span style="font-size:24px;">🎁</span>
-      <div><div style="font-weight:700;font-size:13px;">100% Free Participation</div><div style="font-size:12px;color:var(--muted);">No purchase required to enter.</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <span style="font-size:24px;">🔐</span>
-      <div><div style="font-weight:700;font-size:13px;">Secure & Trusted</div><div style="font-size:12px;color:var(--muted);">Your data is protected.</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <span style="font-size:24px;">✅</span>
-      <div><div style="font-weight:700;font-size:13px;">Verified Partners</div><div style="font-size:12px;color:var(--muted);">Trusted promotional offers.</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <span style="font-size:24px;">🎁</span>
-      <div><div style="font-weight:700;font-size:13px;">New Offers Daily</div><div style="font-size:12px;color:var(--muted);">Fresh opportunities every day.</div></div>
-    </div>
+  <div class="trust-bar-inner">
+    <span class="trust-item">🔒 100% Free Participation</span>
+    <span class="trust-item">🔐 Secure & Trusted</span>
+    <span class="trust-item">✅ Verified Partners</span>
+    <span class="trust-item">🎁 New Offers Daily</span>
   </div>
 </div>
 
@@ -419,21 +440,21 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
 <div style="background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);" id="how">
   <div class="section" style="padding-top:56px;padding-bottom:56px;">
     <div class="s-label">Simple Process</div>
-    <div class="s-title">HOW IT <span class="gold">WORKS</span></div>
+    <div class="s-title">How It <span class="gold">Works</span></div>
     <div class="hiw-grid">
-      <div class="hiw-card" style="display:flex;align-items:center;gap:16px;background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:18px 24px;max-width:500px;">
+      <div class="hiw-card">
         <div class="hiw-num">1</div>
         <div class="hiw-icon">🎁</div>
         <div class="hiw-title">Choose an Offer</div>
         <div class="hiw-text">Browse and select an offer that interests you.</div>
       </div>
-      <div class="hiw-card" style="display:flex;align-items:center;gap:16px;background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:18px 24px;max-width:500px;">
+      <div class="hiw-card">
         <div class="hiw-num">2</div>
         <div class="hiw-icon">📝</div>
         <div class="hiw-title">Complete Registration</div>
         <div class="hiw-text">Submit the required information on the partner's page.</div>
       </div>
-      <div class="hiw-card" style="display:flex;align-items:center;gap:16px;background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:18px 24px;max-width:500px;">
+      <div class="hiw-card">
         <div class="hiw-num">3</div>
         <div class="hiw-icon">✅</div>
         <div class="hiw-title">Confirm Eligibility</div>
@@ -451,42 +472,43 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
     <div class="why-join">
       <h3>Why Join?</h3>
       <ul class="why-list">
-        <li><div style="width:22px;height:22px;border-radius:6px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#22c55e;font-size:12px;">✓</div> Free to Enter</li>
-        <li><div style="width:22px;height:22px;border-radius:6px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#22c55e;font-size:12px;">✓</div> New Opportunities Daily</li>
-        <li><div style="width:22px;height:22px;border-radius:6px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#22c55e;font-size:12px;">✓</div> Trusted Promotional Partners</li>
-        <li><div style="width:22px;height:22px;border-radius:6px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#22c55e;font-size:12px;">✓</div> Fast &amp; Easy Registration</li>
-        <li><div style="width:22px;height:22px;border-radius:6px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#22c55e;font-size:12px;">✓</div> Multiple Offers Available</li>
-        <li><div style="width:22px;height:22px;border-radius:6px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#22c55e;font-size:12px;">✓</div> No Hidden Fees</li>
+        <li><div class="why-check">✅</div> Free to Enter</li>
+        <li><div class="why-check">✅</div> New Opportunities Daily</li>
+        <li><div class="why-check">✅</div> Trusted Promotional Partners</li>
+        <li><div class="why-check">✅</div> Fast &amp; Easy Registration</li>
+        <li><div class="why-check">✅</div> Multiple Offers Available</li>
+        <li><div class="why-check">✅</div> No Hidden Fees</li>
       </ul>
     </div>
 
     <!-- FAQ -->
     <div class="faq-wrap">
-      <h3 style="font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:20px;">FREQUENTLY ASKED QUESTIONS</h3>
+      <h3>Frequently Asked Questions</h3>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Is it really free? <span class="faq-icon">+</span></div>
         <div class="faq-a">Yes, participation is completely free. No purchase is necessary to enter any of our featured offers.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">How do I enter? <span class="faq-icon">+</span></div>
-        <div class="faq-a">Winners are selected randomly by the sponsoring partners. Each promotion has its own selection process outlined in the terms.</div>
+        <div class="faq-a">Simply click on any offer above. You'll be directed to the partner's page where you can complete the short registration form to enter.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Do I need a credit card? <span class="faq-icon">+</span></div>
-        <div class="faq-a">Most offers are available to US residents who are 18 years or older. Some promotions may have additional eligibility requirements.</div>
+        <div class="faq-a">It depends on the specific promotion. Some offers may require payment information to complete certain steps. Always read the terms on the partner's page.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Can I enter multiple offers? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes! You can enter as many offers as you like. Each offer is independent, so entering more gives you more chances to win.</div>
+      </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">When will I know if I won? <span class="faq-icon">+</span></div>
         <div class="faq-a">Winners are typically notified by email by the sponsoring partner. Make sure to check your inbox and spam folder after entering.</div>
-      </div>        <div class="faq-a">Entry limits vary by promotion. Some offers allow multiple entries while others are limited to one per person. Check the terms for each offer.</div>
       </div>
     </div>
 
     <!-- REVIEWS -->
     <div class="reviews-wrap">
-      <h3 style="font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:20px;">WHAT PEOPLE ARE SAYING</h3>
+      <h3>What People Are Saying</h3>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
         <div class="review-text">"I love the daily offers! Just entered for the Amazon gift card. Super easy process."</div>
@@ -505,6 +527,52 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
       </div>
     </div>
 
+  </div>
+</div>
+
+<!-- RECENT WINNERS -->
+<div style="background:var(--dark2);border-top:1px solid var(--border);" id="winners">
+  <div class="section" style="padding-top:48px;padding-bottom:48px;">
+    <div class="s-label">✅ Verified</div>
+    <div class="s-title">Recent <span class="gold">Winners</span></div>
+    <div class="winners-grid">
+      <div class="winner-card">
+        <div class="winner-av" style="background:rgba(34,197,94,.15);color:#22c55e;">SM</div>
+        <div>
+          <div class="winner-name">Sarah M.</div>
+          <div class="winner-loc">Texas</div>
+          <div class="winner-prize">Won $750 Cash App</div>
+          <div class="winner-time">2 hours ago</div>
+        </div>
+      </div>
+      <div class="winner-card">
+        <div class="winner-av" style="background:rgba(59,130,246,.15);color:#60a5fa;">JT</div>
+        <div>
+          <div class="winner-name">James T.</div>
+          <div class="winner-loc">Florida</div>
+          <div class="winner-prize">Won $100 PayPal</div>
+          <div class="winner-time">4 hours ago</div>
+        </div>
+      </div>
+      <div class="winner-card">
+        <div class="winner-av" style="background:rgba(245,197,24,.15);color:#f5c518;">ER</div>
+        <div>
+          <div class="winner-name">Emily R.</div>
+          <div class="winner-loc">California</div>
+          <div class="winner-prize">Won $100 Taco Bell</div>
+          <div class="winner-time">6 hours ago</div>
+        </div>
+      </div>
+      <div class="winner-card">
+        <div class="winner-av" style="background:rgba(239,68,68,.15);color:#f87171;">MK</div>
+        <div>
+          <div class="winner-name">Michael K.</div>
+          <div class="winner-loc">New York</div>
+          <div class="winner-prize">Won $1,000 DailySurge</div>
+          <div class="winner-time">8 hours ago</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -552,11 +620,24 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
       <a href="#">Privacy Policy</a>
       <a href="#">Contact Support</a>
     </div>
-    <div style="display:flex;align-items:center;gap:10px;"><div style="width:40px;height:40px;border:2px solid rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;">💎</div><div><div style="font-size:12px;font-weight:800;color:#fff;">SSL</div><div style="font-size:10px;font-weight:700;color:var(--muted);">SECURE</div></div></div>
+    <div class="ssl-badge">🔒 SSL SECURE</div>
   </div>
 </footer>
 
 <script>
+// Countdown spots
+let sp=46;
+setInterval(()=>{
+  if(sp>8&&Math.random()<.12){
+    sp--;
+    const pct=Math.round(100-(sp/250*100));
+    document.getElementById('spots').textContent=sp;
+    document.getElementById('spotsbig').textContent=sp;
+    document.getElementById('pct').textContent=pct+'%';
+    document.getElementById('pfill').style.width=pct+'%';
+  }
+},10000);
+
 // FAQ toggle
 function toggleFaq(el){
   const isOpen=el.classList.contains('open');
@@ -566,4 +647,4 @@ function toggleFaq(el){
 </script>
 
 </body>
-</html>
+</html>deploy
