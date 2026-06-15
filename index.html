@@ -42,8 +42,18 @@ nav{background:rgba(10,14,28,.95);backdrop-filter:blur(10px);border-bottom:1px s
 .alert-bar span{color:var(--gold);}
 
 /* ─── HERO ─── */
-.hero{max-width:1100px;margin:0 auto;padding:56px 24px 48px;display:grid;grid-template-columns:1fr 480px;gap:40px;align-items:center;}
+.hero{max-width:1100px;margin:0 auto;padding:56px 24px 48px;display:grid;grid-template-columns:1fr 480px;gap:40px;align-items:center;position:relative;background-image: url('logo de app.png');background-repeat: no-repeat;background-position: right center;background-size: 520px;}
 .hero-left{}
+.hero-left{position:relative;z-index:2;}
+
+/* Dégradé pour fondu de l'image vers la gauche */
+.hero::after{
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: linear-gradient(90deg, var(--dark) 35%, transparent 70%);
+  z-index:1;
+}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(245,197,24,.12);border:1px solid rgba(245,197,24,.35);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:22px;}
 .hero-h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,58px);font-weight:900;text-transform:uppercase;line-height:1.05;margin-bottom:16px;}
 .hero-h1 .gold{color:var(--gold);}
@@ -180,13 +190,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
   .nav-cta{font-size:11px;padding:8px 12px;}
 
   /* HERO */
-  .hero{grid-template-columns:1fr;padding:24px 16px;}
-  .hero-right{
-    display:flex;
-    justify-content:center;
-    margin-top:24px;
-  }
-  .hero-right img{max-width:280px;}
+  .hero{grid-template-columns:1fr;padding:24px 16px;background-size: 300px;background-position: center bottom;padding-bottom: 320px;}
   .hero-h1{font-size:32px;}
   .hero-trust{grid-template-columns:1fr;}
 
@@ -285,13 +289,6 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
         <div><div class="trust-label">Trusted Partners</div><div class="trust-sub">Secure &amp; reliable offers</div></div>
       </div>
     </div>
-  </div>
-  <div class="hero-right">
-    <img src="logo de app.png" 
-         style="width:420px;height:420px;object-fit:contain;
-                filter:drop-shadow(0 0 50px rgba(245,197,24,0.35));
-                animation:float 3s ease-in-out infinite;"
-         alt="Daily Prize Drop">
   </div>
 </div>
 
