@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RewardHub USA – Discover Free Reward Opportunities</title>
+<title>PrizeAlertUSA – Enter for a Chance to Win Exclusive Rewards</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -42,18 +42,8 @@ nav{background:rgba(10,14,28,.95);backdrop-filter:blur(10px);border-bottom:1px s
 .alert-bar span{color:var(--gold);}
 
 /* ─── HERO ─── */
-.hero{max-width:1100px;margin:0 auto;padding:56px 24px 48px;display:grid;grid-template-columns:1fr 480px;gap:40px;align-items:center;position:relative;background-image: url('logo de app.png');background-repeat: no-repeat;background-position: right center;background-size: 520px;background-blend-mode: screen;}
+.hero{max-width:1100px;margin:0 auto;padding:56px 24px 48px;display:grid;grid-template-columns:1fr 480px;gap:40px;align-items:center;}
 .hero-left{}
-.hero-left{position:relative;z-index:2;}
-
-/* Dégradé pour fondu de l'image vers la gauche */
-.hero::after{
-  content:'';
-  position:absolute;
-  top:0; left:0; right:0; bottom:0;
-  background: linear-gradient(90deg, var(--dark) 35%, transparent 70%);
-  z-index:1;
-}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(245,197,24,.12);border:1px solid rgba(245,197,24,.35);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:22px;}
 .hero-h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,58px);font-weight:900;text-transform:uppercase;line-height:1.05;margin-bottom:16px;}
 .hero-h1 .gold{color:var(--gold);}
@@ -65,12 +55,7 @@ nav{background:rgba(10,14,28,.95);backdrop-filter:blur(10px);border-bottom:1px s
 .trust-sub{font-size:11px;color:var(--muted);}
 
 /* Hero right — brand mosaic */
-.hero-right{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  max-width:480px;
-}
+.hero-right{position:relative;display:flex;align-items:center;justify-content:center;}
 .brand-mosaic{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;}
 .brand-card{background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:20px;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:inherit;transition:transform .2s,border-color .2s;position:relative;overflow:hidden;}
 .brand-card:hover{transform:translateY(-4px);border-color:rgba(245,197,24,.4);}
@@ -83,18 +68,6 @@ nav{background:rgba(10,14,28,.95);backdrop-filter:blur(10px);border-bottom:1px s
 .chip-hot{background:#ef4444;color:#fff;}
 .chip-pop{background:#7c3aed;color:#fff;}
 .chip-big{background:var(--gold2);color:#000;}
-
-/* ─── TRUST BAR ─── */
-.trust-bar{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.trust-bar-inner{max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;}
-.trust-bar .trust-item{font-size:13px;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:6px;}
-
-/* ─── BRAND BAR ─── */
-.brand-bar{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.brand-bar-inner{max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-.brand-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);}
-.brand-list{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-.brand-item{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
 
 /* ─── STATS BAR ─── */
 .stats-bar{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
@@ -119,19 +92,19 @@ nav{background:rgba(10,14,28,.95);backdrop-filter:blur(10px);border-bottom:1px s
 
 /* ─── OFFER CARDS ─── */
 .offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.offer-card{background:#ffffff;border:1px solid #e5e7eb;border-radius:18px;padding:24px 16px 20px;text-align:center;text-decoration:none;color:#111;display:flex;flex-direction:column;align-items:center;gap:10px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;}
-.offer-card:hover{transform:translateY(-6px);border-color:rgba(245,197,24,.5);box-shadow:0 16px 40px rgba(0,0,0,.1);}
+.offer-card{background:var(--dark2);border:1px solid var(--border);border-radius:18px;padding:24px 16px 20px;text-align:center;text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:10px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;}
+.offer-card:hover{transform:translateY(-6px);border-color:rgba(245,197,24,.5);box-shadow:0 16px 40px rgba(0,0,0,.5);}
 .offer-card.featured{border-color:rgba(245,197,24,.4);box-shadow:0 0 0 1px rgba(245,197,24,.2);}
 .offer-top-badge{position:absolute;top:0;left:0;right:0;padding:5px 0;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;text-align:center;}
 .badge-red{background:#ef4444;color:#fff;}
 .badge-purple{background:#7c3aed;color:#fff;}
 .badge-gold{background:linear-gradient(90deg,var(--gold2),var(--gold));color:#000;}
 .offer-logo{width:80px;height:80px;object-fit:contain;margin-top:14px;}
-.offer-brand{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#666;}
-.offer-amount{font-family:'Barlow Condensed',sans-serif;font-size:46px;font-weight:900;color:#22c55e;line-height:1;}
-.offer-desc{font-size:12px;color:#666;line-height:1.5;}
-.offer-meta{display:flex;flex-direction:column;gap:4px;width:100%;border-top:1px solid #e5e7eb;padding-top:10px;}
-.offer-meta-row{display:flex;align-items:center;gap:6px;font-size:11px;color:#999;justify-content:center;}
+.offer-brand{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);}
+.offer-amount{font-family:'Barlow Condensed',sans-serif;font-size:46px;font-weight:900;color:var(--gold);line-height:1;}
+.offer-desc{font-size:12px;color:var(--muted);line-height:1.5;}
+.offer-meta{display:flex;flex-direction:column;gap:4px;width:100%;border-top:1px solid var(--border);padding-top:10px;}
+.offer-meta-row{display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,.4);justify-content:center;}
 .offer-btn{width:100%;padding:12px 0;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#000;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;border-radius:10px;margin-top:4px;transition:transform .15s,box-shadow .15s;}
 .offer-card:hover .offer-btn{transform:scale(1.03);box-shadow:0 4px 16px rgba(230,168,0,.4);}
 
@@ -194,63 +167,29 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
 .footer-bottom a{font-size:11px;color:rgba(255,255,255,.4);text-decoration:none;}
 .footer-bottom a:hover{color:#fff;}
 .footer-links{display:flex;gap:20px;}
-.ssl-badge{font-size:11px;font-weight:700;color:var(--green);background:rgba(34,197,94,.1);padding:4px 10px;border-radius:6px;border:1px solid rgba(34,197,94,.3);}
 
 /* ─── RESPONSIVE ─── */
-@media(max-width:768px){
-  /* NAVBAR */
+@media(max-width:900px){
   .nav-links{display:none;}
-  .nav-cta{font-size:11px;padding:8px 12px;}
-
-  /* HERO */
-  .hero{grid-template-columns:1fr;padding:24px 16px;background-size: 300px;background-position: center bottom;padding-bottom: 320px;}
-  .hero-h1{font-size:32px;}
-  .hero-trust{grid-template-columns:1fr;}
-
-  /* STATS BAR */
-  .stats-inner{flex-direction:column;gap:12px;}
-  .stat-sep{display:none;}
-  .progress-wrap{width:100%;}
-
-  /* OFFERS */
-  .offers-grid{
-    grid-template-columns:repeat(6,260px);
-    overflow-x:auto;
-    padding-bottom:12px;
-    -webkit-overflow-scrolling:touch;
-    scroll-snap-type:x mandatory;
-  }
-  .offer-card{scroll-snap-align:start;}
-
-  /* HOW IT WORKS */
+  .hamburger{display:block;}
+  .hero{grid-template-columns:1fr;padding:36px 20px 32px;}
+  .hero-right{display:none;}
+  .offers-grid{grid-template-columns:1fr 1fr;}
+  .three-col{grid-template-columns:1fr;}
+  .winners-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
   .hiw-grid{grid-template-columns:1fr;}
   .hiw-grid::before{display:none;}
-
-  /* 3 COLONNES */
-  .three-col{grid-template-columns:1fr;}
-
-  /* WINNERS */
+}
+@media(max-width:560px){
+  .offers-grid{grid-template-columns:1fr;}
   .winners-grid{grid-template-columns:1fr;}
-
-  /* FOOTER */
-  .footer-top{grid-template-columns:1fr;gap:24px;}
-  .footer-bottom{flex-direction:column;text-align:center;gap:12px;}
-  .footer-links{flex-wrap:wrap;justify-content:center;gap:12px;}
-
-  /* SECTION PADDING */
-  .section{padding:40px 16px;}
-}
-
-@keyframes float {
-  0%,100% { transform: translateY(0px); }
-  50%      { transform: translateY(-12px); }
-}
-
-@media(max-width:480px){
-  .hero-h1{font-size:26px;}
-  .offer-amount{font-size:36px;}
-  .nav-inner{padding:0 12px;}
-  .nav-cta span{display:none;}
+  .hero-trust{grid-template-columns:1fr;}
+  .stats-inner{flex-direction:column;align-items:flex-start;}
+  .stat-sep{display:none;}
+  .footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .footer-links{flex-direction:column;align-items:center;gap:10px;}
 }
 </style>
 </head>
@@ -260,8 +199,8 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
-      <img src="logo de app.png" style="width:38px;height:38px;border-radius:10px;object-fit:cover;">
-      <div class="logo-text">RewardHub<span>USA</span></div>
+      <div class="logo-icon">🎁</div>
+      <div class="logo-text">PrizeAlert<span>USA</span></div>
     </a>
     <div class="nav-links">
       <a href="#" class="active">Home</a>
@@ -270,7 +209,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
       <a href="#how">How It Works</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a href="#offers" class="nav-cta">View All Offers</a>
+    <a href="#offers" class="nav-cta">🎁 Claim Your Reward</a>
     <button class="hamburger" onclick="this.textContent=this.textContent==='☰'?'✕':'☰'">☰</button>
   </div>
 </nav>
@@ -281,43 +220,64 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-    <div class="hero-badge">🎉 Reward Opportunities</div>
-    <h1 class="hero-h1">Discover Free +<br><span class="gold">Reward Opportunities</span></h1>
-    <p class="hero-p">Enter promotional giveaways from trusted partners for a chance to receive amazing rewards.</p>
+    <div class="hero-badge">🎉 Exclusive Offers Available Now</div>
+    <h1 class="hero-h1">Enter for a Chance to<br><span class="gold">Win Exclusive Rewards</span></h1>
+    <p class="hero-p">Complete simple steps and get a chance to win amazing rewards from top brands. Free to enter, no purchase necessary.</p>
     <div class="hero-trust">
       <div class="trust-item">
         <div class="trust-icon">🆓</div>
-        <div><div class="trust-label">Free to Enter</div><div class="trust-sub">No purchase needed</div></div>
+        <div><div class="trust-label">100% Free</div><div class="trust-sub">No purchase needed</div></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">⚡</div>
+        <div><div class="trust-label">Easy to Enter</div><div class="trust-sub">Takes only a few minutes</div></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔄</div>
+        <div><div class="trust-label">Daily Opportunities</div><div class="trust-sub">New rewards every day</div></div>
       </div>
       <div class="trust-item">
         <div class="trust-icon">🤝</div>
         <div><div class="trust-label">Trusted Partners</div><div class="trust-sub">Secure &amp; reliable offers</div></div>
       </div>
-      <div class="trust-item">
-        <div class="trust-icon">🔄</div>
-        <div><div class="trust-label">New Offers Daily</div><div class="trust-sub">Fresh rewards every day</div></div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">🇺🇸</div>
-        <div><div class="trust-label">US Residents</div><div class="trust-sub">Available to US residents</div></div>
-      </div>
     </div>
   </div>
   <div class="hero-right">
-    <img src="hero-image.png" alt="Gift Cards and Rewards" style="width:100%;max-width:500px;object-fit:contain;">
-  </div>
-</div>
-
-<!-- BRAND BAR -->
-<div class="brand-bar">
-  <div class="brand-bar-inner">
-    <span class="brand-label">⭐ Featured Brands</span>
-    <div class="brand-list">
-      <span class="brand-item">amazon</span>
-      <span class="brand-item">Walmart</span>
-      <span class="brand-item">TARGET</span>
-      <span class="brand-item">ALDI</span>
-      <span class="brand-item">PayPal</span>
+    <div class="brand-mosaic">
+      <a href="https://app.hawktrk.com/click?pid=2&offer_id=91&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" class="brand-card">
+        <div class="brand-chip chip-hot">Hot</div>
+        <img class="brand-logo" src="taco bell.jpeg" alt="Taco Bell">
+        <div style="display:none;font-size:36px">🌮</div>
+        <div class="brand-amount">$100</div>
+        <div class="brand-name">Taco Bell</div>
+      </a>
+      <a href="https://app.hawktrk.com/click?pid=2&offer_id=576&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" class="brand-card">
+        <img class="brand-logo" src="paypal.png" alt="PayPal">
+        <div style="display:none;font-size:36px">🅿️</div>
+        <div class="brand-amount">$100</div>
+        <div class="brand-name">PayPal</div>
+      </a>
+      <a href="https://app.hawktrk.com/click?pid=2&offer_id=663&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" class="brand-card featured">
+        <div class="brand-chip chip-pop">Popular</div>
+        <img class="brand-logo" src="cash app.png" alt="Cash App">
+        <div style="display:none;font-size:36px">💸</div>
+        <div class="brand-amount">$750</div>
+        <div class="brand-name">Cash App</div>
+      </a>
+      <a href="https://app.hawktrk.com/click?pid=2&offer_id=7&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" class="brand-card">
+        <img class="brand-logo" src="Chick-fil-A-logo.png" alt="Chick-fil-A">
+        <div style="display:none;font-size:36px">🐔</div>
+        <div class="brand-amount">$100</div>
+        <div class="brand-name">Chick-fil-A</div>
+      </a>
+      <a href="https://app.hawktrk.com/click?pid=2&offer_id=18251&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" class="brand-card big">
+        <div style="font-size:48px">🏆</div>
+        <div>
+          <div class="brand-chip chip-big" style="position:static;display:inline-block;margin-bottom:4px;">Big Win</div>
+          <div class="brand-amount" style="font-size:36px;">$50,000</div>
+          <div class="brand-name">PrizeZappy Giveaway</div>
+        </div>
+      </a>
     </div>
   </div>
 </div>
@@ -343,13 +303,13 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
 
 <!-- OFFERS -->
 <div class="section" id="offers">
-  <div class="s-label">🔥 Featured Offers</div>
-  <div class="s-title">Handpicked Opportunities <span class="gold">Just for You</span></div>
+  <div class="s-label">🔥 Exclusive Offers</div>
+  <div class="s-title">Pick Your <span class="gold">Reward</span></div>
   <div class="offers-grid">
 
     <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=91&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
       <div class="offer-top-badge badge-red">🔥 Hot Choice</div>
-      <img class="offer-logo" src="taco bell.png" style="width:80px;height:80px;object-fit:contain;background:white;border-radius:12px;padding:8px;" alt="Taco Bell">
+      <img class="offer-logo" src="taco bell.jpeg" alt="Taco Bell">
       <div class="offer-brand">Taco Bell</div>
       <div class="offer-amount">$100</div>
       <div class="offer-desc">Gift Card Giveaway</div>
@@ -372,17 +332,17 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
       <div class="offer-btn">Enter Now →</div>
     </a>
 
-    <a class="offer-card featured" href="https://app.hawktrk.com/click?pid=2&offer_id=19630&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
-      <div class="offer-top-badge badge-purple">⭐ Featured Offer</div>
-      <img class="offer-logo" src="card_amazon.png" alt="Amazon">
-      <div class="offer-brand">Amazon</div>
-      <div class="offer-amount">$1,000</div>
-      <div class="offer-desc">Amazon Gift Card</div>
+    <a class="offer-card featured" href="https://app.hawktrk.com/click?pid=2&offer_id=663&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
+      <div class="offer-top-badge badge-purple">⭐ Popular</div>
+      <img class="offer-logo" src="cash app.png" alt="Cash App">
+      <div class="offer-brand">Cash App</div>
+      <div class="offer-amount">$750</div>
+      <div class="offer-desc">Cash Prize Giveaway</div>
       <div class="offer-meta">
         <div class="offer-meta-row">⏰ Limited Availability</div>
         <div class="offer-meta-row">👥 Thousands Participating</div>
       </div>
-      <div class="offer-btn">View Offer →</div>
+      <div class="offer-btn">Claim Your Chance →</div>
     </a>
 
     <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=7&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
@@ -397,42 +357,31 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
       <div class="offer-btn">Get Started →</div>
     </a>
 
-    <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=17412&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
-      <div class="offer-top-badge badge-red">🔥 Most Popular</div>
-      <img class="offer-logo" src="card_aldi.png" alt="Aldi Rewards">
-      <div class="offer-brand">Aldi Rewards</div>
-      <div class="offer-amount">$1,000</div>
-      <div class="offer-desc">Aldi Rewards Card</div>
+    <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=18251&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
+      <div class="offer-top-badge badge-gold">🏆 Big Win</div>
+      <img class="offer-logo" src="PrizeZappy.png" alt="PrizeZappy">
+      <div class="offer-brand">PrizeZappy</div>
+      <div class="offer-amount">$50K</div>
+      <div class="offer-desc">Chance to Win $50,000</div>
       <div class="offer-meta">
         <div class="offer-meta-row">⏰ Limited Availability</div>
         <div class="offer-meta-row">👥 Thousands Participating</div>
       </div>
-      <div class="offer-btn">View Offer →</div>
+      <div class="offer-btn">Enter Now →</div>
     </a>
 
-    <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=20830&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
-      <div class="offer-top-badge badge-gold">🏆 Top Reward</div>
-      <img class="offer-logo" src="card_shopping.png" alt="Grocery Card">
-      <div class="offer-brand">Grocery Card</div>
+    <a class="offer-card" href="https://app.hawktrk.com/click?pid=2&offer_id=18396&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" rel="noopener">
+      <img class="offer-logo" src="Coke vs Pepsi Poll.jpg" alt="Coke vs Pepsi">
+      <div class="offer-brand">DailySurge</div>
       <div class="offer-amount">$1,000</div>
-      <div class="offer-desc">Grocery Rewards Card</div>
+      <div class="offer-desc">Coke vs Pepsi Poll</div>
       <div class="offer-meta">
         <div class="offer-meta-row">⏰ Limited Availability</div>
         <div class="offer-meta-row">👥 Thousands Participating</div>
       </div>
-      <div class="offer-btn">View Offer →</div>
+      <div class="offer-btn">Enter Now →</div>
     </a>
 
-  </div>
-</div>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-bar-inner">
-    <span class="trust-item">🔒 100% Free Participation</span>
-    <span class="trust-item">🔐 Secure & Trusted</span>
-    <span class="trust-item">✅ Verified Partners</span>
-    <span class="trust-item">🎁 New Offers Daily</span>
   </div>
 </div>
 
@@ -446,19 +395,19 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
         <div class="hiw-num">1</div>
         <div class="hiw-icon">🎁</div>
         <div class="hiw-title">Choose an Offer</div>
-        <div class="hiw-text">Browse and select an offer that interests you.</div>
+        <div class="hiw-text">Pick the reward that interests you from our selection of exclusive giveaways.</div>
       </div>
       <div class="hiw-card">
         <div class="hiw-num">2</div>
         <div class="hiw-icon">📝</div>
-        <div class="hiw-title">Complete Registration</div>
-        <div class="hiw-text">Submit the required information on the partner's page.</div>
+        <div class="hiw-title">Enter Your Info</div>
+        <div class="hiw-text">Fill out the short registration form on the partner's page to get started.</div>
       </div>
       <div class="hiw-card">
         <div class="hiw-num">3</div>
         <div class="hiw-icon">✅</div>
-        <div class="hiw-title">Confirm Eligibility</div>
-        <div class="hiw-text">Follow the instructions to complete your entry.</div>
+        <div class="hiw-title">Follow Instructions</div>
+        <div class="hiw-text">Complete the required steps to secure your entry and check eligibility.</div>
       </div>
     </div>
   </div>
@@ -511,18 +460,26 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
       <h3>What People Are Saying</h3>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"I love the daily offers! Just entered for the Amazon gift card. Super easy process."</div>
+        <div class="review-text">"Quick and easy process! Took less than 2 minutes."</div>
         <div class="review-author">
-          <div class="review-av" style="background:rgba(34,197,94,.2);color:#22c55e;">JM</div>
-          <div class="review-name">Jessica M.</div>
+          <div class="review-av" style="background:rgba(34,197,94,.2);color:#22c55e;">SM</div>
+          <div class="review-name">Sarah M. — Texas</div>
         </div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Great site with legit offers. I won a gift card last month. Highly recommend!"</div>
+        <div class="review-text">"Found the offer through TikTok. Simple registration experience."</div>
         <div class="review-author">
-          <div class="review-av" style="background:rgba(99,102,241,.2);color:#818cf8;">DR</div>
-          <div class="review-name">David R.</div>
+          <div class="review-av" style="background:rgba(99,102,241,.2);color:#818cf8;">ER</div>
+          <div class="review-name">Emily R. — California</div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"I love the daily new offers! Always something exciting."</div>
+        <div class="review-author">
+          <div class="review-av" style="background:rgba(245,197,24,.2);color:#f5c518;">JT</div>
+          <div class="review-name">James T. — Florida</div>
         </div>
       </div>
     </div>
@@ -581,11 +538,10 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
   <div class="footer-top">
     <div class="footer-brand">
       <a href="#" class="logo">
-        <img src="logo de app.png" style="width:38px;height:38px;border-radius:10px;object-fit:cover;">
-        <div class="logo-text">RewardHub<span>USA</span></div>
+        <div class="logo-icon">🎁</div>
+        <div class="logo-text">PrizeAlert<span>USA</span></div>
       </a>
       <p>Your destination for exclusive rewards and giveaways. Enter today and unlock exciting opportunities from top brands.</p>
-      <p style="font-size:11px;color:rgba(255,255,255,.3);line-height:1.6;margin-top:12px;">This website promotes third-party promotional offers. Reward availability, eligibility requirements and winner selection are determined by each promotional partner. This site is not affiliated with Amazon, Aldi, PayPal, or any trademark owner displayed on this website.</p>
       <div class="footer-social">
         <a class="social-btn" href="#" aria-label="TikTok">📱</a>
         <a class="social-btn" href="#" aria-label="Instagram">📸</a>
@@ -594,33 +550,32 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
       </div>
     </div>
     <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="#">Terms &amp; Conditions</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Affiliate Disclosure</a>
-      <a href="#">Earnings Disclaimer</a>
+      <h4>Quick Links</h4>
+      <a href="#offers">Offers</a>
+      <a href="#winners">Winners</a>
+      <a href="#how">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#">Contact</a>
     </div>
     <div class="footer-col">
       <h4>Support</h4>
-      <a href="#faq">FAQ</a>
+      <a href="#">Help Center</a>
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="#">Privacy Policy</a>
       <a href="#">Contact Us</a>
-      <a href="#">Offer Support</a>
     </div>
     <div class="footer-col">
-      <h4>Resources</h4>
-      <a href="#how">How It Works</a>
-      <a href="#winners">Winners</a>
-      <a href="#offers">All Offers</a>
+      <h4>Disclaimer</h4>
+      <p style="font-size:12px;color:rgba(255,255,255,.3);line-height:1.7;">PrizeAlertUSA is a promotional participation website. We are not affiliated with or endorsed by any of the brands featured. Rewards may vary by location and are subject to eligibility requirements. This site contains affiliate links.</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2024 RewardHub USA. All rights reserved. No purchase necessary where applicable. Promotions may vary by location.</p>
+    <p>© 2024 PrizeAlertUSA. All rights reserved. No purchase necessary where applicable. Promotions may vary by location.</p>
     <div class="footer-links">
       <a href="#">Terms &amp; Conditions</a>
       <a href="#">Privacy Policy</a>
       <a href="#">Contact Support</a>
     </div>
-    <div class="ssl-badge">🔒 SSL SECURE</div>
   </div>
 </footer>
 
@@ -647,4 +602,4 @@ function toggleFaq(el){
 </script>
 
 </body>
-</html>deploy
+</html>
