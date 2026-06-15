@@ -176,7 +176,12 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
 
   /* HERO */
   .hero{grid-template-columns:1fr;padding:24px 16px;}
-  .hero-right{display:none;}
+  .hero-right{
+    display:flex;
+    justify-content:center;
+    margin-top:24px;
+  }
+  .hero-right img{max-width:280px;}
   .hero-h1{font-size:32px;}
   .hero-trust{grid-template-columns:1fr;}
 
@@ -186,7 +191,14 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
   .progress-wrap{width:100%;}
 
   /* OFFERS */
-  .offers-grid{grid-template-columns:1fr;}
+  .offers-grid{
+    grid-template-columns:repeat(6,260px);
+    overflow-x:auto;
+    padding-bottom:12px;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x mandatory;
+  }
+  .offer-card{scroll-snap-align:start;}
 
   /* HOW IT WORKS */
   .hiw-grid{grid-template-columns:1fr;}
@@ -205,6 +217,11 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
 
   /* SECTION PADDING */
   .section{padding:40px 16px;}
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-12px); }
 }
 
 @media(max-width:480px){
@@ -265,42 +282,11 @@ footer{background:var(--dark2);border-top:1px solid var(--border);}
     </div>
   </div>
   <div class="hero-right">
-    <div class="brand-mosaic">
-      <a href="https://app.hawktrk.com/click?pid=2&offer_id=91&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" class="brand-card">
-        <div class="brand-chip chip-hot">Hot</div>
-        <img class="brand-logo" src="taco bell.png" style="width:80px;height:80px;object-fit:contain;background:white;border-radius:12px;padding:8px;" alt="Taco Bell">
-        <div style="display:none;font-size:36px">🌮</div>
-        <div class="brand-amount">$100</div>
-        <div class="brand-name">Taco Bell</div>
-      </a>
-      <a href="https://app.hawktrk.com/click?pid=2&offer_id=576&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" class="brand-card">
-        <img class="brand-logo" src="paypal.png" alt="PayPal">
-        <div style="display:none;font-size:36px">🅿️</div>
-        <div class="brand-amount">$100</div>
-        <div class="brand-name">PayPal</div>
-      </a>
-      <a href="https://app.hawktrk.com/click?pid=2&offer_id=663&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" class="brand-card featured">
-        <div class="brand-chip chip-pop">Popular</div>
-        <img class="brand-logo" src="cash app.png" alt="Cash App">
-        <div style="display:none;font-size:36px">💸</div>
-        <div class="brand-amount">$750</div>
-        <div class="brand-name">Cash App</div>
-      </a>
-      <a href="https://app.hawktrk.com/click?pid=2&offer_id=7&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" class="brand-card">
-        <img class="brand-logo" src="Chick-fil-A-logo.png" alt="Chick-fil-A">
-        <div style="display:none;font-size:36px">🐔</div>
-        <div class="brand-amount">$100</div>
-        <div class="brand-name">Chick-fil-A</div>
-      </a>
-      <a href="https://app.hawktrk.com/click?pid=2&offer_id=18251&sub2=u539043&sub5=s1SUBID1HERE" target="_blank" class="brand-card big">
-        <div style="font-size:48px">🏆</div>
-        <div>
-          <div class="brand-chip chip-big" style="position:static;display:inline-block;margin-bottom:4px;">Big Win</div>
-          <div class="brand-amount" style="font-size:36px;">$50,000</div>
-          <div class="brand-name">PrizeZappy Giveaway</div>
-        </div>
-      </a>
-    </div>
+    <img src="logo de app.png" 
+         style="width:100%;max-width:500px;object-fit:contain;
+                filter:drop-shadow(0 0 60px rgba(245,197,24,0.5));
+                animation:float 3s ease-in-out infinite;"
+         alt="Daily Prize Drop">
   </div>
 </div>
 
